@@ -1,12 +1,12 @@
-/* Color Palette Variables: Deep Indigo Tech Theme */
+/* Color Palette Variables: Electric Blue Tech Theme (Kept) */
 :root {
-    --primary-bg: #190A38; /* Deep Indigo/Violet */
-    --secondary-bg: #2C1A50; /* Slightly lighter shade for sections/cards */
-    --accent-color: #00FFFF; /* Electric Cyan/Neon Blue for accents */
-    --text-light: #FFFFFF; /* Pure White for main text */
-    --text-dark: #C0C0C0; /* Muted light gray for details */
+    --primary-bg: #0A0A0A; /* Near Black */
+    --secondary-bg: #1A1A1A; /* Darker Gray for sections/cards */
+    --accent-color: #00FFFF; /* Electric Blue/Cyan for accents */
+    --text-light: #FFFFFF; /* Pure White for headings and main text */
+    --text-dark: #B0B0B0; /* Muted light gray for details */
     --link-hover: #00E5E5;
-    --card-border: #4A3A69; /* Muted purple border */
+    --card-border: #333333;
 }
 
 /* Global Reset and Utility */
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, professional font stack */
     line-height: 1.6;
     color: var(--text-light);
     background-color: var(--primary-bg);
@@ -41,12 +41,13 @@ a:hover {
 }
 
 h2 {
+    font-family: 'Inter', sans-serif;
     text-align: center;
     margin-bottom: 50px;
     font-size: 2.5em;
     color: var(--text-light);
     position: relative;
-    font-weight: 300;
+    font-weight: 700; /* Bolder headings */
 }
 
 h2::after {
@@ -57,21 +58,65 @@ h2::after {
     background: var(--accent-color);
     margin: 10px auto 0;
     border-radius: 5px;
-    box-shadow: 0 0 5px var(--accent-color);
+    box-shadow: 0 0 3px var(--accent-color); /* Subtle glow */
 }
 
-/* --- Header and Navigation --- */
+/* --- Header and Navigation Bar Theme --- */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9); /* Near-solid black for contrast */
     position: fixed;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--card-border);
+    border-bottom: 2px solid var(--accent-color); /* Thicker accent line */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* ... (Navigation styles remain similar) ... */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0; /* Increased padding for height */
+}
 
-/* --- Hero Section (Centered Text) --- */
+.logo-area {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.logo-area i {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 800; /* Very bold logo */
+    color: var(--text-light);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space out nav links */
+}
+
+nav ul li a {
+    color: var(--text-dark); /* Muted link color */
+    padding: 8px 0;
+    display: block;
+    font-weight: 600; /* Semi-bold text */
+    font-size: 1.05em;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: var(--accent-color); /* Bright on hover/active */
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- Hero Section (Text, Font & Size Adjustments) --- */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -81,20 +126,14 @@ header {
     align-items: center;
     text-align: center;
     
-    /* NEW: Circuit Board Background Pattern */
+    /* Background unchanged from previous request to preserve your image/theme */
     background-color: var(--primary-bg);
-    background-image: 
-        linear-gradient(90deg, var(--secondary-bg) 1px, transparent 1px), 
-        linear-gradient(var(--secondary-bg) 1px, transparent 1px);
-   
-    /* ... other styles ... */
-    background-image: url('images/tech_background.jpg'); /* This line will use your uploaded image */
-    /* ... other styles ... */
-
-    background-size: 50px 50px;
-    opacity: 0.95;
-    /* Adding subtle lines over the grid for depth, matching the reference */
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7); 
+    background-image: url('images/tech_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); 
+    filter: brightness(0.9) saturate(1.1); 
 }
 
 .hero-content {
@@ -103,109 +142,109 @@ header {
     position: relative;
     z-index: 50;
     padding: 50px;
-    background: rgba(0, 0, 0, 0.75); /* Darker overlay for contrast */
+    background: rgba(0, 0, 0, 0.8); /* Slightly less transparency */
     border-radius: 10px;
-    border: 2px solid var(--accent-color);
-    box-shadow: 0 0 50px rgba(0, 255, 255, 0.5); /* Stronger neon glow */
+    border: 1px solid var(--accent-color); /* Thinner border */
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3); /* Reduced glow */
 }
 
 .greeting {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 5px;
-    color: var(--accent-color);
+    color: var(--text-dark);
 }
 
 .intro-text h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 5.5em; 
-    font-weight: 700;
+    font-size: 4.5em; /* Slightly reduced size */
+    font-weight: 900; /* Very heavy weight for name */
     color: var(--text-light);
     line-height: 1.1;
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Strong text glow */
+    text-align: center;
+    text-shadow: none; /* Removed intense text glow */
 }
 
 .intro-text h2 {
-    font-size: 2.8em;
+    font-size: 2.2em; /* Slightly reduced size */
     color: var(--accent-color);
     margin: 10px 0 40px;
+    font-weight: 500;
 }
 
 .contact-btn {
+    /* Style remains strong */
     background: var(--accent-color);
     color: var(--primary-bg);
-    padding: 15px 40px;
-    border-radius: 5px;
-    font-size: 1.3em;
-    font-weight: 600;
+    padding: 14px 35px;
+    font-size: 1.2em;
+    font-weight: 700;
     transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
 .contact-btn:hover {
     background: var(--link-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
 }
 
 .hero-social-links a {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 15px;
     color: var(--text-light);
 }
-.hero-social-links a:hover {
-    color: var(--accent-color);
-}
 
 /* --- Main Content Sections (Card Styling) --- */
-.dark-section {
-    background-color: var(--secondary-bg);
-}
 
 .skill-category {
     background: var(--primary-bg);
-    padding: 25px;
-    border-radius: 8px;
+    padding: 30px 25px; /* Added vertical padding */
+    border-radius: 6px;
     border: 1px solid var(--card-border);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .skill-category:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-}
-
-.skill-category h3 {
-    color: var(--accent-color);
-    /* ... */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
 /* Projects Section */
 .project-card {
     background: var(--secondary-bg);
     padding: 25px;
-    border-radius: 8px;
+    border-radius: 6px;
     border-left: 5px solid var(--accent-color);
-    margin-bottom: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Credentials and Accomplishments Section */
-.certifications-list span {
-    background: var(--accent-color);
-    color: var(--primary-bg);
-    /* ... */
-}
-
 .achievements-list li {
+    font-size: 1em;
+    padding: 12px 15px;
+    background: var(--secondary-bg);
     border-left: 4px solid var(--accent-color);
-    /* ... */
 }
 
 /* Footer */
 footer {
     background: #000000;
+    padding: 25px 0;
+    font-size: 0.9em;
     border-top: 1px solid var(--card-border);
 }
 
 /* --- Media Queries (Responsiveness remains same) --- */
-/* ... */
-
+@media (max-width: 768px) {
+    .intro-text h1 {
+        font-size: 3.5em;
+    }
+    .intro-text h2 {
+        font-size: 2em;
+    }
+    nav ul {
+        gap: 10px;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
