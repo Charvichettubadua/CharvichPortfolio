@@ -3,144 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charvi Sri Chettubadula - Full-Stack & AI Portfolio</title>
+    <title>Charvi Sri Chettubadula - Full-Stack & AI Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <header id="home">
-        <nav>
-            <a href="#home" class="logo">Charvi Sri</a>
+    <header>
+        <nav class="container">
+            <div class="logo-area">
+                <i class="fas fa-code"></i>
+                <a href="#home" class="logo">Charvi Sri</a>
+            </div>
             <ul>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero-content">
-            <img src="images/profile.jpg" alt="Charvi Sri Profile Photo" class="profile-photo"> 
-            <h1>Charvi Sri Chettubadula</h1>
-            <p class="tagline">Full-Stack Development | AI & Data Science Student</p>
-            [cite_start]<p class="motto">Seeking challenging opportunities in Web Development to leverage my knowledge, skills, and experience in delivering optimal, real-world solutions and contributing to organizational goals[cite: 3].</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/..." target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/Charvichettubadua" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </header>
+    
+    <section id="home" class="hero-section">
+        <div class="hero-content container">
+            <div class="intro-text">
+                <p class="greeting">Hi, I'm Charvi Sri</p>
+                <h1>Chettubadula</h1>
+                <h2>Full-Stack & AI Developer</h2>
+                <a href="#contact" class="btn contact-btn">Contact Me</a>
+            </div>
+            
+            <div class="image-area">
+                <img src="images/profile.jpg" alt="Charvi Sri Profile Photo" class="profile-photo-custom">
+            </div>
+
+            <div class="hero-social-links">
+                <a href="https://www.linkedin.com/in/..." target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Charvichettubadua" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    </header>
+    </section>
 
     <main>
-        <section id="about" class="section">
+        <section id="about" class="section container">
             <h2>About Me</h2>
-            [cite_start]<p>I am a passionate B.Tech. student specializing in Artificial Intelligence and Data Science [cite: 56, 60][cite_start], currently focused on mastering Full-Stack Development and Generative AI technologies[cite: 21, 24]. [cite_start]My goal is to apply technical skills in C, Python, Java, and PHP to develop responsive, dynamic web applications and contribute innovative solutions to the Information Technology sector[cite: 19, 21, 3].</p>
+            <p class="about-summary">I am a passionate B.Tech. student specializing in Artificial Intelligence and Data Science, currently focused on mastering Full-Stack Development and Generative AI technologies. My goal is to apply technical skills in C, Python, Java, and PHP to develop responsive, dynamic web applications and contribute innovative solutions to the Information Technology sector.</p>
         </section>
         
-        <section id="skills" class="section tech-stack-section">
+        <section id="skills" class="section container dark-section">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fas fa-code"></i> Programming</h3>
-                    [cite_start]<p>C [cite: 19][cite_start], Python (Intermediate) [cite: 19][cite_start], Java (Intermediate) [cite: 19][cite_start], JavaScript (Basic) [cite: 20]</p>
+                    <p>C, Python (Intermediate), Java (Intermediate), JavaScript (Basic)</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-desktop"></i> Web & App Development</h3>
-                    [cite_start]<p>HTML5, CSS3, Bootstrap, PHP, Full-Stack Development [cite: 21]</p>
+                    <p>HTML5, CSS3, Bootstrap, PHP, Full-Stack Development</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Databases & Back-End</h3>
-                    [cite_start]<p>MySQL (Basic), MongoDB (Beginner), MySQL Connector [cite: 22]</p>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-wrench"></i> Frameworks & Tools</h3>
-                    [cite_start]<p>GitHub [cite: 23][cite_start], Visual Studio Code [cite: 23][cite_start], Node.js (Basic) [cite: 23][cite_start], React.js (Learning) [cite: 23]</p>
+                    <p>MySQL (Basic), MongoDB (Beginner), MySQL Connector</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-robot"></i> AI & Emerging Tech</h3>
-                    [cite_start]<p>Foundational knowledge in Generative AI (Gemini AI), Google AI for Anyone [cite: 24]</p>
+                    <p>Foundational knowledge in Generative AI (Gemini AI), Google AI for Anyone</p>
                 </div>
             </div>
         </section>
         
-        <section id="experience" class="section">
-            <h2>Work Experience & Internships</h2>
-            
-            <div class="job-card">
-                [cite_start]<h3>Generative AI - Intern (Remote) <span class="duration">Jul 2024 - Aug 2024 [cite: 7, 9, 32]</span></h3>
-                <ul>
-                    [cite_start]<li>Explored Gemini AI and its practical applications in educating the public on Generative AI concepts[cite: 34].</li>
-                    [cite_start]<li>Conducted awareness sessions and applied knowledge of AI concepts to real-world outreach scenarios[cite: 35].</li>
-                </ul>
-            </div>
-
-            <div class="job-card">
-                [cite_start]<h3>Octanet - Web Development - Intern (Remote) <span class="duration">May 2023 - June 2023 [cite: 25, 26, 27]</span></h3>
-                <ul>
-                    [cite_start]<li>Involved in full-stack development of responsive web applications[cite: 30].</li>
-                    [cite_start]<li>Built dynamic web pages using HTML, CSS, and JavaScript[cite: 31].</li>
-                    [cite_start]<li>Obtained practical experience with front-end and back-end technologies[cite: 30].</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
+        <section id="projects" class="section container">
             <h2>Featured Projects</h2>
             
             <div class="project-card">
-                <h3>1. Logistic Managers <a href="https://github.com/Charvichettubadua/Logistic Managers" target="_blank"><i class="fab fa-github"></i> GitHub</a></h3>
-                [cite_start]<p>Developed a full-stack logistics coordination platform allowing customers to submit shipment requests and receive optimized bids from transporters in real time[cite: 38].</p>
-                [cite_start]<p class="tech-used"><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL[cite: 45].</p>
-                <p class="challenge"><strong>Key Role/Challenges:</strong> Implemented session management and dynamic UI. [cite_start]Overcame complexity in building a real-time bidding logic system ensuring fair and simultaneous transporter offers[cite: 43, 44].</p>
+                <h3>1. Logistic Managers <a href="https://github.com/Charvichettubadua/Logistic Managers" target="_blank"><i class="fab fa-github"></i></a></h3>
+                <p>Developed a full-stack logistics coordination platform allowing customers to submit shipment requests and receive optimized bids from transporters in real time.</p>
+                <p class="tech-used"><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL.</p>
             </div>
             
             <div class="project-card">
-                <h3>2. Sparsha Rakshak Toy <a href="https://github.com/Charvichettubadua/Sparsha Rakshak" target="_blank"><i class="fab fa-github"></i> GitHub</a></h3>
-                [cite_start]<p>Designed an embedded toy system with sensors and voice playback to promote child safety using Embedded C[cite: 51].</p>
-                [cite_start]<p class="tech-used"><strong>Tech Stack:</strong> Micro Controllers, Sensors, Speakers, Power Source, Embedded C language[cite: 55].</p>
-                [cite_start]<p class="challenge"><strong>Key Role/Challenges:</strong> Overcame issues syncing sensor input with accurate voice alerts due to hardware-software timing mismatches[cite: 53].</p>
+                <h3>2. Sparsha Rakshak Toy <a href="https://github.com/Charvichettubadua/Sparsha Rakshak" target="_blank"><i class="fab fa-github"></i></a></h3>
+                <p>Designed an embedded toy system with sensors and voice playback to promote child safety using Embedded C.</p>
+                <p class="tech-used"><strong>Tech Stack:</strong> Micro Controllers, Sensors, Speakers, Embedded C language.</p>
             </div>
         </section>
 
-        <section id="education" class="section">
-            <h2>Education & Certifications</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>B.Tech: AI and Data Science</h3>
-                    [cite_start]<p>Seshadri Rao Gudlavalleru Engineering College (2023 - 2026) [cite: 57, 60]</p>
-                    [cite_start]<p>Graduated with **81.8% (8.2 CGPA)**[cite: 60].</p>
-                </div>
-                <div class="education-card">
-                    <h3>Diploma: ECE</h3>
-                    [cite_start]<p>VKR&VNB Polytechnic College - Gudivada (2020 - 2023) [cite: 58, 59, 61]</p>
-                    [cite_start]<p>Graduated with **77.7% (7.8 CGPA)**[cite: 61].</p>
-                </div>
-            </div>
-            
-            <h3 class="cert-heading">Certifications & Accomplishments</h3>
-            <div class="certifications-list">
-                [cite_start]<span><i class="fas fa-medal"></i> Certified in Python - Hackerrank [cite: 63]</span>
-                [cite_start]<span><i class="fas fa-medal"></i> Certified in Full Stack Web Development - Cognifyz [cite: 65]</span>
-                [cite_start]<span><i class="fas fa-medal"></i> Certified in Google AI for Anyone - Google [cite: 64]</span>
-                [cite_start]<span><i class="fas fa-medal"></i> **3rd prize** in SRGEC INTERNAL SMART INDIA HACKATHON (SIH-2024) [cite: 69, 70]</span>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section container dark-section">
             <h2>Get In Touch</h2>
             <div class="contact-details">
                 <p><i class="fas fa-envelope"></i> Professional Email: <a href="mailto:gdv.ch.charvisri@gmail.com">gdv.ch.charvisri@gmail.com</a></p>
-                [cite_start]<p><i class="fas fa-envelope"></i> Personal Email: <a href="mailto:charvichettubadula@gmail.com">charvichettubadula@gmail.com</a> [cite: 13]</p>
-                [cite_start]<p><i class="fas fa-phone"></i> Phone: +91 8919996745 [cite: 11]</p>
-                [cite_start]<p><i class="fas fa-map-marker-alt"></i> Location: Andhra Pradesh, India [cite: 8]</p>
+                <p><i class="fas fa-phone"></i> Phone: +91 8919996745</p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: Andhra Pradesh, India</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Charvi Sri Chettubadula. Web Development & AI Portfolio.</p>
+        <div class="container">
+            <p>&copy; 2025 Charvi Sri Chettubadula. Built for a Professional Web Development profile.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
