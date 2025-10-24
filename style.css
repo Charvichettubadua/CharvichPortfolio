@@ -1,12 +1,12 @@
-/* Color Palette Variables: High-Contrast Tech Theme */
+/* Color Palette Variables: Deep Indigo Tech Theme */
 :root {
-    --primary-bg: #111111; /* Charcoal Black for the main background */
-    --secondary-bg: #1F1F1F; /* Dark Gray for sections/cards */
-    --accent-color: #00ADB5; /* Bright Cyan/Aqua Blue for accents */
-    --text-light: #EEEEEE; /* Near White for headings and main text */
-    --text-dark: #A9A9A9; /* Muted light gray for details */
-    --link-hover: #ffffff;
-    --card-border: #333333;
+    --primary-bg: #190A38; /* Deep Indigo/Violet */
+    --secondary-bg: #2C1A50; /* Slightly lighter shade for sections/cards */
+    --accent-color: #00FFFF; /* Electric Cyan/Neon Blue for accents */
+    --text-light: #FFFFFF; /* Pure White for main text */
+    --text-dark: #C0C0C0; /* Muted light gray for details */
+    --link-hover: #00E5E5;
+    --card-border: #4A3A69; /* Muted purple border */
 }
 
 /* Global Reset and Utility */
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Consolas', 'Courier New', monospace;
     line-height: 1.6;
     color: var(--text-light);
     background-color: var(--primary-bg);
@@ -46,6 +46,7 @@ h2 {
     font-size: 2.5em;
     color: var(--text-light);
     position: relative;
+    font-weight: 300;
 }
 
 h2::after {
@@ -56,58 +57,21 @@ h2::after {
     background: var(--accent-color);
     margin: 10px auto 0;
     border-radius: 5px;
+    box-shadow: 0 0 5px var(--accent-color);
 }
 
 /* --- Header and Navigation --- */
 header {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     position: fixed;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid var(--card-border);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
+/* ... (Navigation styles remain similar) ... */
 
-.logo-area {
-    display: flex;
-    align-items: center;
-}
-
-.logo-area i {
-    font-size: 1.5em;
-    color: var(--accent-color);
-    margin-right: 10px;
-}
-
-.logo {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: var(--text-light);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li a {
-    color: var(--text-light);
-    padding: 10px 15px;
-    display: block;
-    font-weight: 500;
-}
-
-nav ul li a.active, nav ul li a:hover {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-}
-
-/* --- Hero Section (Text-Only, Centered) --- */
+/* --- Hero Section (Centered Text) --- */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -117,25 +81,125 @@ nav ul li a.active, nav ul li a:hover {
     align-items: center;
     text-align: center;
     
-    /* NEW: Nano-Technology Hexagonal Background Pattern */
+    /* NEW: Circuit Board Background Pattern */
     background-color: var(--primary-bg);
     background-image: 
-        linear-gradient(45deg, var(--secondary-bg) 25%, transparent 25%), 
-        linear-gradient(-45deg, var(--secondary-bg) 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, var(--secondary-bg) 75%), 
-        linear-gradient(-45deg, transparent 75%, var(--secondary-bg) 75%);
-    background-size: 30px 30px; /* Adjust size for detail */
-    background-position: 0 0, 0 30px, 30px 30px, -30px 0;
-    opacity: 0.9; /* Slightly reduce opacity so it doesn't distract */
+        linear-gradient(90deg, var(--secondary-bg) 1px, transparent 1px), 
+        linear-gradient(var(--secondary-bg) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.95;
+    /* Adding subtle lines over the grid for depth, matching the reference */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7); 
 }
 
 .hero-content {
-    max-width: 800px; 
+    max-width: 900px; 
     display: block;
     position: relative;
     z-index: 50;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5); /* Stronger background for contrast over the pattern */
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.75); /* Darker overlay for contrast */
     border-radius: 10px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.5); /* Stronger neon glow */
+}
+
+.greeting {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.intro-text h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5.5em; 
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1.1;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Strong text glow */
+}
+
+.intro-text h2 {
+    font-size: 2.8em;
+    color: var(--accent-color);
+    margin: 10px 0 40px;
+}
+
+.contact-btn {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.contact-btn:hover {
+    background: var(--link-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.8);
+}
+
+.hero-social-links a {
+    font-size: 2.5em;
+    margin: 0 15px;
+    color: var(--text-light);
+}
+.hero-social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Main Content Sections (Card Styling) --- */
+.dark-section {
+    background-color: var(--secondary-bg);
+}
+
+.skill-category {
+    background: var(--primary-bg);
+    padding: 25px;
+    border-radius: 8px;
     border: 1px solid var(--card-border);
-    box-shadow: 0 0 30px rgba(
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.skill-category:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.skill-category h3 {
+    color: var(--accent-color);
+    /* ... */
+}
+
+/* Projects Section */
+.project-card {
+    background: var(--secondary-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color);
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Credentials and Accomplishments Section */
+.certifications-list span {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    /* ... */
+}
+
+.achievements-list li {
+    border-left: 4px solid var(--accent-color);
+    /* ... */
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    border-top: 1px solid var(--card-border);
+}
+
+/* --- Media Queries (Responsiveness remains same) --- */
+/* ... */
