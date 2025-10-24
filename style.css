@@ -1,8 +1,8 @@
 /* Color Palette Variables: Dark Theme */
 :root {
-    --primary-bg: #1A1A1D; /* Deep Black/Navy for background */
-    --secondary-bg: #2C2C30; /* Slightly lighter background for sections */
-    --accent-color: #E94560; /* Vibrant Red/Pink for accents (like in the example) */
+    --primary-bg: #111115; /* Deep Black/Navy for background */
+    --secondary-bg: #1E1E22; /* Slightly lighter background for sections */
+    --accent-color: #E94560; /* Vibrant Red/Pink for accents */
     --text-light: #F8F8F8; /* Light gray/white text */
     --text-dark: #A0A0A0; /* Muted text for details */
     --link-hover: #ffffff;
@@ -58,7 +58,7 @@ h2::after {
     border-radius: 5px;
 }
 
-/* --- Header and Navigation --- */
+/* --- Header and Navigation --- (Same as previous, for consistency) */
 header {
     background: rgba(0, 0, 0, 0.4);
     position: fixed;
@@ -107,29 +107,33 @@ nav ul li a.active, nav ul li a:hover {
     border-bottom: 2px solid var(--accent-color);
 }
 
-/* --- Hero Section (The Custom Dark Design) --- */
-/* Locate this block in your style.css */
+/* --- Hero Section (Text-Only, Centered) --- */
 .hero-section {
     position: relative;
     height: 100vh;
     padding-top: 80px;
     display: flex;
-    align-items: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
     
-    /* New background for pure dark theme */
-    background: var(--primary-bg); 
-    background-size: cover;
+    /* NEW: Technology Background Pattern */
+    background-color: var(--primary-bg);
+    background-image: radial-gradient(#2c2c30 1px, transparent 1px), radial-gradient(#2c2c30 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
 }
+
 .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* Set max-width for content to prevent stretching */
+    max-width: 800px; 
+    display: block;
     position: relative;
     z-index: 50;
 }
 
 .intro-text {
-    max-width: 50%;
+    /* No max-width needed here since it's centered */
 }
 
 .greeting {
@@ -142,13 +146,14 @@ nav ul li a.active, nav ul li a:hover {
     font-weight: 700;
     color: var(--text-light);
     line-height: 1.1;
+    text-align: center; /* Ensure text is centered */
 }
 
 .intro-text h2 {
     font-size: 2.5em;
     color: var(--accent-color);
     margin: 10px 0 30px;
-    text-align: left;
+    text-align: center; /* Ensure text is centered */
 }
 
 .contact-btn {
@@ -165,45 +170,24 @@ nav ul li a.active, nav ul li a:hover {
     background: #FF6A7A;
 }
 
-/* Custom Image Styling */
-.image-area {
-    width: 450px;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* This clip-path creates the custom diagonal/rounded shape */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 85% 100%, 15% 100%, 0% 75%);
-    background: rgba(255, 255, 255, 0.1); /* Slight border/background effect */
-    border-radius: 15px;
-    transform: rotate(10deg); /* Slight rotation like the example */
-    margin-right: -50px; /* Pulls it slightly off the edge */
-}
-
-.profile-photo-custom {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: rotate(-10deg); /* Counter-rotate the image to keep it straight */
-}
+/* REMOVED: Custom Image Styling blocks */
 
 .hero-social-links {
-    position: absolute;
-    bottom: 30px;
-    left: 25px;
+    position: static; /* Position statically now, since it's centered */
+    margin-top: 30px;
+    text-align: center;
 }
 
 .hero-social-links a {
     font-size: 1.8em;
-    margin-right: 20px;
+    margin: 0 10px;
     color: var(--text-light);
 }
 .hero-social-links a:hover {
     color: var(--accent-color);
 }
 
-/* --- Main Content Sections --- */
+/* --- Main Content Sections --- (Rest of CSS is kept for skills/projects/contact) */
 .section {
     padding: 100px 0;
 }
@@ -308,46 +292,18 @@ footer {
 }
 
 /* --- Media Queries (Responsiveness) --- */
-@media (max-width: 900px) {
-    .hero-content {
-        flex-direction: column-reverse;
-        padding-top: 120px;
-        text-align: center;
-        height: auto;
-    }
-    .intro-text, .image-area {
-        max-width: 100%;
-        width: 100%;
-    }
+@media (max-width: 768px) {
     .intro-text h1 {
         font-size: 3em;
     }
     .intro-text h2 {
         font-size: 2em;
-        text-align: center;
-    }
-    .image-area {
-        width: 300px;
-        height: 300px;
-        margin: 30px auto;
-        transform: none;
-    }
-    .profile-photo-custom {
-        transform: none;
-    }
-    .hero-social-links {
-        position: static;
-        margin-top: 30px;
-    }
-    .hero-section {
-        height: auto;
-        padding-bottom: 80px;
     }
 }
 
 @media (max-width: 600px) {
     nav ul {
-        display: none; /* Hide navigation on very small screens for simplicity */
+        display: none; 
     }
     header {
         position: static;
@@ -359,4 +315,3 @@ footer {
         font-size: 1.5em;
     }
 }
-
