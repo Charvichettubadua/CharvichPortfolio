@@ -44,7 +44,7 @@ h2 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 2.5em;
-    color: var(--text-light); /* Headings should be near white */
+    color: var(--text-light);
     position: relative;
 }
 
@@ -60,7 +60,7 @@ h2::after {
 
 /* --- Header and Navigation --- */
 header {
-    background: rgba(0, 0, 0, 0.6); /* Slightly transparent black */
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -117,11 +117,16 @@ nav ul li a.active, nav ul li a:hover {
     align-items: center;
     text-align: center;
     
-    /* Technology Background Pattern (Cleaner dots/grid) */
+    /* NEW: Nano-Technology Hexagonal Background Pattern */
     background-color: var(--primary-bg);
-    background-image: radial-gradient(var(--card-border) 1px, transparent 1px), radial-gradient(var(--card-border) 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-position: 0 0, 20px 20px;
+    background-image: 
+        linear-gradient(45deg, var(--secondary-bg) 25%, transparent 25%), 
+        linear-gradient(-45deg, var(--secondary-bg) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, var(--secondary-bg) 75%), 
+        linear-gradient(-45deg, transparent 75%, var(--secondary-bg) 75%);
+    background-size: 30px 30px; /* Adjust size for detail */
+    background-position: 0 0, 0 30px, 30px 30px, -30px 0;
+    opacity: 0.9; /* Slightly reduce opacity so it doesn't distract */
 }
 
 .hero-content {
@@ -130,199 +135,7 @@ nav ul li a.active, nav ul li a:hover {
     position: relative;
     z-index: 50;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.4); /* Subtle backing for contrast */
+    background: rgba(0, 0, 0, 0.5); /* Stronger background for contrast over the pattern */
     border-radius: 10px;
     border: 1px solid var(--card-border);
-}
-
-.greeting {
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: var(--text-dark);
-}
-
-.intro-text h1 {
-    font-size: 5em; /* Made name larger */
-    font-weight: 700;
-    color: var(--accent-color); /* Name gets the accent color */
-    line-height: 1.1;
-    text-align: center;
-}
-
-.intro-text h2 {
-    font-size: 2.5em;
-    color: var(--text-light);
-    margin: 10px 0 30px;
-    text-align: center;
-}
-.intro-text h2::after {
-    /* Remove the line under the developer title */
-    content: none;
-}
-
-.contact-btn {
-    background: var(--accent-color);
-    color: var(--primary-bg); /* Dark text on bright button */
-    padding: 14px 35px; /* Bigger button */
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: 600;
-    display: inline-block;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.contact-btn:hover {
-    background: #00C6CD;
-    transform: translateY(-2px);
-}
-
-.hero-social-links {
-    position: static;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.hero-social-links a {
-    font-size: 2em;
-    margin: 0 10px;
-    color: var(--text-light);
-}
-.hero-social-links a:hover {
-    color: var(--accent-color);
-}
-
-/* --- Main Content Sections --- */
-.section {
-    padding: 100px 0;
-}
-
-.dark-section {
-    background-color: var(--secondary-bg);
-}
-
-.about-summary {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 1.1em;
-}
-
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.skill-category {
-    background: var(--primary-bg);
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid var(--card-border);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: border-color 0.3s;
-}
-
-.skill-category:hover {
-    border-color: var(--accent-color);
-}
-
-.skill-category h3 {
-    color: var(--accent-color);
-    margin-bottom: 10px;
-    font-size: 1.3em;
-    display: flex;
-    align-items: center;
-}
-.skill-category i {
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-.skill-category p {
-    color: var(--text-dark);
-}
-
-/* Projects Section */
-.project-card {
-    background: var(--secondary-bg);
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 5px solid var(--accent-color);
-    margin-bottom: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
-    color: var(--text-light);
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-.project-card a {
-    color: var(--text-dark);
-}
-.project-card a:hover {
-    color: var(--accent-color);
-}
-.tech-used {
-    color: var(--text-dark);
-    font-size: 0.9em;
-    margin-top: 10px;
-}
-
-/* Contact Section */
-.contact-details {
-    text-align: center;
-}
-
-.contact-details p {
-    margin: 15px 0;
-    font-size: 1.1em;
-    color: var(--text-light);
-}
-
-.contact-details i {
-    color: var(--accent-color);
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
-/* Footer */
-footer {
-    background: #000000;
-    padding: 20px 0;
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 0.9em;
-    border-top: 1px solid var(--card-border);
-}
-
-/* --- Media Queries (Responsiveness) --- */
-@media (max-width: 768px) {
-    .intro-text h1 {
-        font-size: 4em;
-    }
-    .intro-text h2 {
-        font-size: 2em;
-    }
-}
-@media (max-width: 600px) {
-    nav ul {
-        display: none; 
-    }
-    header {
-        position: static;
-    }
-    .intro-text h1 {
-        font-size: 3em;
-    }
-    .intro-text h2 {
-        font-size: 1.5em;
-    }
-    .contact-btn {
-        padding: 12px 25px;
-        font-size: 1.1em;
-    }
-}
+    box-shadow: 0 0 30px rgba(
