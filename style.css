@@ -108,6 +108,7 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 /* --- Hero Section (The Custom Dark Design) --- */
+/* Locate this block in your style.css */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -115,11 +116,10 @@ nav ul li a.active, nav ul li a:hover {
     display: flex;
     align-items: center;
     
-    /* Simulate the Network Background */
-    background: var(--primary-bg) url('https://i.imgur.com/dK3f9o8.png') no-repeat center center;
+    /* New background for pure dark theme */
+    background: var(--primary-bg); 
     background-size: cover;
 }
-
 .hero-content {
     display: flex;
     justify-content: space-between;
@@ -359,3 +359,4 @@ footer {
         font-size: 1.5em;
     }
 }
+
